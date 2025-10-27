@@ -1,0 +1,983 @@
+{
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [],
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "event",
+      "inputs": [
+        {
+          "name": "offerId",
+          "type": "uint256",
+          "baseType": "uint256",
+          "indexed": true,
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "seller",
+          "type": "address",
+          "baseType": "address",
+          "indexed": true,
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "baseType": "string",
+          "indexed": false,
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "OfferCreated",
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "inputs": [
+        {
+          "name": "offerId",
+          "type": "uint256",
+          "baseType": "uint256",
+          "indexed": true,
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "OfferDeleted",
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "inputs": [
+        {
+          "name": "offerId",
+          "type": "uint256",
+          "baseType": "uint256",
+          "indexed": true,
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "buyer",
+          "type": "address",
+          "baseType": "address",
+          "indexed": true,
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "seller",
+          "type": "address",
+          "baseType": "address",
+          "indexed": true,
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "OfferPurchased",
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "inputs": [
+        {
+          "name": "newFee",
+          "type": "uint256",
+          "baseType": "uint256",
+          "indexed": false,
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "PlatformFeeUpdated",
+      "anonymous": false
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "activeOfferIds",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "activeOfferIndex",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "_title",
+          "type": "string",
+          "baseType": "string",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_description",
+          "type": "string",
+          "baseType": "string",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_mockEncryptedPrice",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_mockEncryptedDuration",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_mockEncryptedSlots",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_attestation",
+          "type": "bytes",
+          "baseType": "bytes",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "createOffer",
+      "constant": false,
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "_offerId",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "deactivateOffer",
+      "constant": false,
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "_offerId",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "deleteOffer",
+      "constant": false,
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "emergencyWithdraw",
+      "constant": false,
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "getActiveOffers",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]",
+          "baseType": "array",
+          "components": null,
+          "arrayLength": -1,
+          "arrayChildren": {
+            "name": "",
+            "type": "uint256",
+            "baseType": "uint256",
+            "components": null,
+            "arrayLength": null,
+            "arrayChildren": null
+          }
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "getContractBalance",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "getContractStats",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "_totalOffers",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_totalPurchases",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_totalVolume",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_activeOffers",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "_offerId",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "getOffer",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "seller",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "baseType": "string",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "baseType": "string",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "mockEncryptedPrice",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "mockEncryptedDuration",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "mockEncryptedSlots",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "isActive",
+          "type": "bool",
+          "baseType": "bool",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "createdAt",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "getUserActiveOffers",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]",
+          "baseType": "array",
+          "components": null,
+          "arrayLength": -1,
+          "arrayChildren": {
+            "name": "",
+            "type": "uint256",
+            "baseType": "uint256",
+            "components": null,
+            "arrayLength": null,
+            "arrayChildren": null
+          }
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "getUserOffers",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]",
+          "baseType": "array",
+          "components": null,
+          "arrayLength": -1,
+          "arrayChildren": {
+            "name": "",
+            "type": "uint256",
+            "baseType": "uint256",
+            "components": null,
+            "arrayLength": null,
+            "arrayChildren": null
+          }
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "getUserPurchases",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple[]",
+          "baseType": "array",
+          "components": null,
+          "arrayLength": -1,
+          "arrayChildren": {
+            "name": "",
+            "type": "tuple",
+            "baseType": "tuple",
+            "components": [
+              {
+                "name": "buyer",
+                "type": "address",
+                "baseType": "address",
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null
+              },
+              {
+                "name": "offerId",
+                "type": "uint256",
+                "baseType": "uint256",
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null
+              },
+              {
+                "name": "purchaseTime",
+                "type": "uint256",
+                "baseType": "uint256",
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null
+              },
+              {
+                "name": "isRedeemed",
+                "type": "bool",
+                "baseType": "bool",
+                "components": null,
+                "arrayLength": null,
+                "arrayChildren": null
+              }
+            ],
+            "arrayLength": null,
+            "arrayChildren": null
+          }
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "nextOfferId",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "offers",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "seller",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "baseType": "string",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "baseType": "string",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "mockEncryptedPrice",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "mockEncryptedDuration",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "mockEncryptedSlots",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "isActive",
+          "type": "bool",
+          "baseType": "bool",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "createdAt",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "owner",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "platformFee",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "_offerId",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_mockEncryptedPayment",
+          "type": "uint32",
+          "baseType": "uint32",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "_paymentProof",
+          "type": "bytes",
+          "baseType": "bytes",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "purchaseOffer",
+      "constant": false,
+      "outputs": [],
+      "stateMutability": "payable",
+      "payable": true,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "_fee",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "setPlatformFee",
+      "constant": false,
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "totalOffersCreated",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "totalPurchases",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "totalVolume",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "userActiveOffers",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "userOffers",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [
+        {
+          "name": "",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "name": "userPurchases",
+      "constant": true,
+      "outputs": [
+        {
+          "name": "buyer",
+          "type": "address",
+          "baseType": "address",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "offerId",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "purchaseTime",
+          "type": "uint256",
+          "baseType": "uint256",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        },
+        {
+          "name": "isRedeemed",
+          "type": "bool",
+          "baseType": "bool",
+          "components": null,
+          "arrayLength": null,
+          "arrayChildren": null
+        }
+      ],
+      "stateMutability": "view",
+      "payable": false,
+      "gas": null
+    },
+    {
+      "type": "function",
+      "inputs": [],
+      "name": "withdrawFees",
+      "constant": false,
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "payable": false,
+      "gas": null
+    }
+  ],
+  "network": "sepolia",
+  "deployedAt": "2025-09-15T14:53:19.503Z",
+  "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "type": "mock-fhe",
+  "description": "Mock FHE contract for Sepolia testing"
+}
