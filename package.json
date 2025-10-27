@@ -1,0 +1,42 @@
+{
+  "name": "time-marketplace",
+  "version": "1.0.0",
+  "description": "Time Marketplace with FHE encryption using Zama",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "hardhat": "cd contracts && npx hardhat",
+    "deploy": "cd contracts && npx hardhat run scripts/deploy.js --network sepolia",
+    "compile": "cd contracts && npx hardhat compile",
+    "test": "cd contracts && npx hardhat test"
+  },
+  "dependencies": {
+    "@zama-fhe/relayer-sdk": "^0.2.0",
+    "autoprefixer": "^10.4.16",
+    "buffer": "^6.0.3",
+    "ethers": "^6.14.0",
+    "global": "^4.4.0",
+    "lucide-react": "^0.400.0",
+    "next": "14.2.5",
+    "postcss": "^8.4.32",
+    "process": "^0.11.10",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hot-toast": "^2.4.1",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.2.5",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18 <21"
+  }
+}
