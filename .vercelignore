@@ -1,0 +1,49 @@
+# CRITICAL: Ignore ALL non-Next.js files for clean deployment
+node_modules/
+**/node_modules/
+
+# Ignore contracts completely
+contracts/
+**/contracts/
+*.sol
+
+# Ignore artifacts and cache
+**/artifacts/
+**/cache/
+**/fhevmTemp/
+
+# Ignore PHP files
+**/*.php
+*.php
+
+# Ignore API directories
+api/
+**/api/
+
+# Ignore development files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore build artifacts
+out/
+build/
+dist/
+
+# Ignore test files
+**/*.test.*
+**/*.spec.*
+test/
+tests/
+
+# Ignore documentation
+*.md
+docs/
+
+# Ignore archives
+*.zip
+*.tar.gz
+*.rar
+
+# Keep only Next.js files: app/, package.json, next.config.js, etc.
